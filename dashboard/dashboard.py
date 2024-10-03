@@ -84,29 +84,6 @@ ax.set_ylabel('Average Bike Rentals')
 
 st.pyplot(fig)
 
-# Create a column for time of day
-def time_of_day(hour):
-    if 5 <= hour < 12:
-        return "Morning"
-    elif 12 <= hour < 18:
-        return "Afternoon"
-    else:
-        return "Evening"
-
-hour_filtered['time_of_day'] = hour_filtered['hr'].apply(time_of_day)
-
-# Group data by time of day
-time_weather_grouped = hour_filtered.groupby(['time_of_day', 'weathersit']).agg({'cnt': 'mean'}).reset_index()
-
-# Plot
-fig, ax = plt.subplots()
-sns.barplot(x='time_of_day', y='cnt', hue='weathersit', data=time_weather_grouped, palette='Blues', ax=ax)
-ax.set_title('Average Bike Rentals by Time of Day and Weather')
-ax.set_xlabel('Time of Day')
-ax.set_ylabel('Average Bike Rentals')
-
-st.pyplot(fig)
-
 st.subheader("Key Metrics")
 
 total_rentals = day_filtered['cnt'].sum()
