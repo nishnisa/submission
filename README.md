@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ## Run Streamlit app local
 
 ```
-cd dahshboard
+cd dashboard
 ensure that the file paths in dashboard.py correctly point to the dataset files.
 # For local, use:
 # day_df = pd.read_csv('../data/day.csv
