@@ -14,10 +14,14 @@ pipenv shell
 pip install -r requirements.txt
 ```
 
-## Run steamlit app
+## Run Streamlit app local
 
 ```
 cd dahshboard
+ensure that the file paths in dashboard.py correctly point to the dataset files.
+# For local, use:
+# day_df = pd.read_csv('../data/day.csv
+# hour_df = pd.read_csv('../data/hour.csv')
 streamlit run dashboard.py
 ```
 
