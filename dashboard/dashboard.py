@@ -41,9 +41,9 @@ ax.set_ylabel('Average Rentals')
 st.pyplot(fig)
 
 hour_df['weathersit'] = hour_df['weathersit'].map({
-    1: 'Clear',        # 1 means Clear weather
-    2: 'Cloudy',       # 2 means Cloudy weather
-    3: 'Bad Weather'   # 3 means Bad Weather
+    1: 'Clear',        
+    2: 'Cloudy',       
+    3: 'Bad Weather'   
 }) 
 
 # Define the function to categorize time into Morning, Afternoon, and Evening
